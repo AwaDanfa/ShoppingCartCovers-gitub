@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<head>
+
+<title>Shopping Cart Phone Case</title>
+<meta charset="UTF-8">
+<!--meta http-equiv="Content-type" content="text/html;charset=UTF-8"-->
+<script type="text/javascript" src="js/script.js"></script>
+<link href="css/style.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body onload="init();">
+        <ul class="topnav">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#news">Mobile</a></li>
+                <li><a class="active" href="#contact">Accessories</a></li>
+              </ul>
+<div id="main">
+
+    <div id="product_picture">
+        <br>
+ 
+        <div id="main_image">
+            <h1 id="heading">iPhone 8 Case</h1>
+            <img src="images/red.jpg"  id="mainImg">
+        </div>
+        
+           <div id="thumbs_image">
+            <br>
+            <h2>CHOOSE YOUR FINISH</h2>
+            <br>
+            <img src="images/red.jpg"  id="thumbRed" onclick="setOnMouseClick(this)" onMouseOver="changeOnMouseOver(this)" onMouseOut="revertOnMouseOut()" style="cursor: pointer;">
+            <img src="images/blue.jpg"  id="thumbBlue" onclick="setOnMouseClick(this)" onMouseOver="changeOnMouseOver(this)" onMouseOut="revertOnMouseOut()" style="cursor: pointer;">
+            <img src="images/pink.jpg"  id="thumbPink" onclick="setOnMouseClick(this)" onMouseOver="changeOnMouseOver(this)" onMouseOut="revertOnMouseOut()" style="cursor: pointer;" >
+        <br><br><br>
+            </div>
+    </div>
+    
+    <div id="product_order_info">
+            
+			<button class="pushed_button" type="button" name="button">iPhone</button>
+			<button class="unpushed_button" type="button" name="button">Samsung</button>
+				<br><br>
+        <p>Designed by Apple to complement your iPhone, the form of the silicone case fits snugly over the volume buttons, side button and curves of your frvice without adding bulk. A soft microfibre lining on the inside helps protect your iPhone. On the outside, the silky, soft-touch finish of the silicone exterior feels great in your hand.</p>
+        <br>
+        <div id="order_form">
+           
+            Model :
+            <select id="model" onchange="chooseModel();">
+                    <option value="" >Select Model</option>
+                    <option value="iPhone 6S">iPhone 6S</option>
+                    <option value="iPhone 7">iPhone 7</option>
+                    <option value="iPhone 8">iPhone 8</option>   
+            </select><br><br><br>
+            
+
+            Color :
+            <select id="phoneCoverColor" onchange="changeMainImage();" > 
+                <option value="">Select a color</option>       
+                <option value="Red">Red</option>
+                <option value="Blue">Blue</option>
+                <option value="Pink">Pink</option>
+            </select><br><br><br>
+
+            Quantity :
+     
+            <input type="number" id="qty" min="1" max="5" step="1" value="1" onchange="quantity();"> 
+          
+            <br><br><br>
+            <div> Unit Price: <b>£14.99</b></div>
+            <br>
+
+        </div>
+        
+        <div id="order_info">
+            <p>Model :<span id="modelText"> Not Selected</span></p>
+            <p>Color :<span id="modelColor"> Not Selected</span></p>
+            <p>Quantity :<span id="itemQty">Not Selected</span></p>  
+        
+
+            <button id="button" onclick="calcValue();"> Add to Bag </button>
+   
+            <br>
+        </div>
+
+       
+    </div>
+  
+</div>	 
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
